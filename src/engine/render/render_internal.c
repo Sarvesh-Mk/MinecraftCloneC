@@ -37,6 +37,7 @@ int RendererInitCube(Render_State_Internal *r){
 
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+    return 0;
 }
 
 int texInit(const char * path, u32 * texture, bool flip, bool has_rgba){
@@ -58,9 +59,12 @@ int texInit(const char * path, u32 * texture, bool flip, bool has_rgba){
         glGenerateMipmap(GL_TEXTURE_2D);
     }
     else{
-        printf("failed to load texture");
+        printf("failed to load texture: %s\n", path);
+        stbi_image_free(data);
+        return -1;
     }
     stbi_image_free(data);
+    return 0;
 }
 
 void Translate(vec3 pos, u32 ID){

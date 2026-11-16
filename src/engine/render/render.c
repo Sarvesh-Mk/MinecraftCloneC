@@ -21,7 +21,7 @@ void window_init(Global * global){
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    global->renderer.window = glfwCreateWindow(global->renderer.width, global->renderer.height, "minicraft bock3d manic digger cube scape world 小方塊 minebuilder flatcraft cube world", NULL, NULL);
+    global->renderer.window = glfwCreateWindow(global->renderer.width, global->renderer.height, "Minecraft_Clone", NULL, NULL);
     glfwMakeContextCurrent(global->renderer.window);
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     glfwSetInputMode(global->renderer.window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);  

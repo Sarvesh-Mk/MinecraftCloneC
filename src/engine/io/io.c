@@ -46,6 +46,7 @@ int findElement(Array *a, u32 Element){
       return x;
     }
   }
+  return -1;
 }
 
 void freeArray(Array *a){
